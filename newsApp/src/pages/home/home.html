@@ -1,0 +1,55 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+   <ion-buttons end>
+   <button ion-button icon-only (click)= "exitApp()"><ion-icon name="exit"></ion-icon></button>
+   </ion-buttons> 
+    
+    <ion-title>News App</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>Select a news source</ion-label>
+    <ion-select [(ngModel)]="source" (ionChange)="getNewsFromAPi(this.source)">
+      <ion-option value="cnn">CNN</ion-option>
+      <ion-option value="bbc-news">BBC News</ion-option>
+      <ion-option value="bbc-sport">BBC Sports</ion-option>
+      <ion-option value="bloomberg">Bloomberg</ion-option>
+      <ion-option value="buzzfeed">Buzzfeed</ion-option>
+      <ion-option value="daily-mail">Daily mail</ion-option>
+      <ion-option value="four-four-two">Four four two</ion-option>
+      <ion-option value="fox-sports">Fox Sports</ion-option>
+      <ion-option value="hacker-news">Hacker News</ion-option>
+      <ion-option value="mtv-news">Mtv News</ion-option>
+      <ion-option value="techcrunch">Techcrunch</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-card *ngFor="let newsInfo of news">
+    <img src={{newsInfo.urlToImage}}/>
+    <ion-card-content>
+      <ion-card-title>
+        {{newsInfo.title}}
+      </ion-card-title>
+      <p>
+        {{newsInfo.description}}
+      </p>
+      <a href={{newsInfo.url}} ion-button> read more </a>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
