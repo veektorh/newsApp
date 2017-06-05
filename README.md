@@ -18,3 +18,7 @@ How to improve
 
     Add some text to about page
 	Add menu icon to the navbar on about page
+	
+![Screenshot](http://res.cloudinary.com/bolum-victor/image/upload/v1496653287/Screenshot_2017-06-02-20-00-43_jqie5l.png)
+![Screenshot](http://res.cloudinary.com/bolum-victor/image/upload/v1496653290/Screenshot_2017-06-02-19-59-48_rpalfz.png)
+![Screenshot](http://res.cloudinary.com/bolum-victor/image/upload/v1496653272/Screenshot_2017-06-02-19-59-37_zmbmhj.png)
